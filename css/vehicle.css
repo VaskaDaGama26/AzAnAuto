@@ -1,0 +1,54 @@
+.vehicle-card {
+    border-radius: 12px;
+    box-shadow: 0px 3px 12px 0px rgba(0, 0, 0, 0.2);
+    border-right: 1px solid var(--borderMore);
+    border-bottom: 1px solid var(--borderMore);
+    overflow: hidden;
+    background-color: #fff;
+    transition: transform 0.2s;
+}
+.vehicle-title {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.vehicle-card:hover {
+    transform: scale(1.05);
+}
+
+.vehicle-card img {
+    width: 100%;
+    height: 222px;
+    object-fit: cover;
+
+}
+
+.vehicle-details {
+    padding: 15px;
+}
+
+.vehicle-price {
+    font-size: 24px;
+    font-weight: normal;
+    color: #333;
+    display: flex;
+    align-items: center;
+}
+
+.vehicle-info {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.vehicle-info .badge {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 20px;
+    background-color: rgba(90,207,165,40%);
+    color: black;
+    padding: 4px 9px 4px 6px;
+    border-radius: 20px;
+}

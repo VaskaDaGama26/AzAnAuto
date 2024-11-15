@@ -1,0 +1,409 @@
+:root {
+    --color1: #5ACFA5;
+    --color2: #2184B7;
+    --color3: #4BB4B4;
+    --colorGrey: #D9D9D9;
+    --buttonBG: #5ACFA5;
+    --buttonHover: #4BAD8A;
+    --buttonActive: #439377;
+    --border: #8E8D8D;
+    --hoverGrey: #A7A7A7;
+}
+
+.primaryColor {
+    color: var(--color1);
+  }
+
+  @font-face {
+    font-family: 'Proxima Nova';
+    src: url("../font/proximanova_regular.otf") format("opentype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Proxima Nova';
+    src: url("../font/proximanova_bold.otf") format("opentype");
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Proxima Nova';
+    src: url("../font/proximanova_extrabold.otf") format("opentype");
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Proxima Nova';
+    src: url("../font/proximanova_light.otf") format("opentype");
+    font-weight: 300;
+    font-style: normal;
+}
+
+@keyframes show {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+body {
+    width: 100%;
+    margin: 0 auto; /* Center body */
+    padding: 0;
+    font-family: 'Proxima Nova', sans-serif;
+}
+
+.logo_car{
+    opacity: 0.25;
+    filter: grayscale(100%);
+}
+
+.logo_car:hover{
+    opacity: 1;
+    filter: none;
+    transition: 0.3s ease-in-out;
+}
+
+.car_card {
+    border-radius: 8px;
+    background-color: #e2e2e2;
+    width: 198px;
+    height: 193px;
+    box-shadow: 0px 3px 12px 0px rgba(0, 0, 0, 0.2);
+    border-right: 1px solid var(--borderMore);
+    border-bottom: 1px solid var(--borderMore);
+}
+
+.car_card:hover {
+    background-color: var(--hoverGrey);
+    transition: 0.3s ease;
+}
+
+.car_text {
+    font-size: 18px;
+    font-weight: normal;
+}
+.about_color_p {
+    font-weight: bold;
+    color: var(--color1);
+}
+
+.back-button {
+    display: flex;
+    align-items: center;
+    color: #8e8e8e;
+}
+.back-button:hover {
+    color: black;
+    transition: 0.3s ease;
+}
+
+.back-button .material-icons {
+    font-size: 10px;
+    line-height: 1;
+}
+
+.button_cars {
+    font-family: "Proxima Nova";
+    font-weight: normal;
+    border-radius: 6px;
+    background-color: var(--color1); 
+    border: none; 
+    text-decoration:none; 
+    color:black; 
+    width: 198px;
+    text-align: center;
+    padding: 8px 16px;
+}
+
+.button_cars:hover{
+    background-color: var(--buttonHover);
+    transition: 0.3s ease;
+}
+
+html {
+    scroll-behavior: smooth;
+    height: 100%;
+
+}
+body {
+    width: 100%;
+    margin: 0 auto; /* Центрирует body */
+    padding: 0;
+    font-family: 'Proxima Nova'
+}
+.row {
+    display: flex;
+    flex-wrap: wrap; /* Позволяет колонкам переходить на следующую строку */
+    justify-content: space-between; /* Добавляет отступы между колонками */
+}
+
+.wrapper {
+    display: flex;
+    min-height: 100vh; /* Используйте 100vh для высоты */
+    flex-direction: column;
+}
+
+.container {
+    max-width: 1160px; /* Убедитесь, что это значение корректно */
+    margin: 0 auto; /* Центрирует контейнер */
+    padding: 0 15px; /* Добавляет отступы */
+    box-sizing: border-box;
+}
+
+section {
+    scroll-margin-top: 165px;
+}
+
+.box {
+    opacity: 0; /* Скрываем секции по умолчанию */
+    transition: opacity 0.5s ease;
+}
+
+.box.show { /* Класс, который добавится при скролле */
+    opacity: 1;
+    animation: 1.5s show ease;
+}
+
+.page{
+    flex: 1 0 auto;
+}
+
+.me-12px {
+    margin-right: 12px;
+}
+.ms-32px {
+    margin-left: 32px;
+}
+.mb-32px {
+    margin-bottom: 32px;
+}
+.mb-64px {
+    margin-bottom: 64px;
+}
+.mb-24px {
+    margin-bottom:24px;
+}
+.mb-42px {
+    margin-bottom: 42px;
+}
+.mt-132px {
+    margin-top: 132px;
+}
+.mt-164px {
+    margin-top: 164px;
+}
+.mt-96px {
+    margin-top: 96px;
+}
+.mt-32px {
+    margin-top: 32px;
+}
+.mt-64px {
+    margin-top: 64px;
+}
+
+.fs-16px{
+    font-size: 16px;
+}
+.fs-18px{
+    font-size: 18px;
+}
+.fs-20px{
+    font-size: 20px;
+}
+.fs-22px{
+    font-size: 22px;
+}
+.fs-24px{
+    font-size: 24px;
+}
+.fs-28px{
+    font-size: 28px;
+}
+.fs-32px{
+    font-size: 32px;
+}
+.fs-48px{
+    font-size: 48px;
+}
+
+.custom-underline {
+    border-bottom: 1px var(--colorGrey) solid;
+}
+.about_color{
+    color: black;
+}
+.serv_color{
+    color: var(--color1);
+}
+.services_color{
+    color: var(--color1);
+}
+.contact_color{
+    color: var(--color1);
+}
+.br-16px{
+    border-radius: 16px;
+}
+.br-8px{
+    border-radius: 8px;
+}
+
+/* Отступ между иконками */
+.icons .icon {
+    margin-right: 12px; /* Отступ между иконками */
+    justify-content: center;
+}
+/* Убираем отступ у последней иконки */
+.icons .icon:last-child {
+    margin-right: 0;
+}
+.collapse .icons {
+    justify-content: center;
+    margin-left: 32px;
+    margin-top: 10px;
+}
+
+.navbar-toggler {
+    border: none; /* Убирает рамку */
+    outline: none; /* Убирает обводку при фокусе */
+}
+
+.c_shadow {
+    box-shadow: 0px 3px 12px 0px rgba(0, 0, 0, 0.2);
+    border-right: 1px solid var(--borderMore);
+    border-bottom: 1px solid var(--borderMore);
+}
+.btn-more{
+    background-color: var(--buttonBG);
+    padding: 6px 0;
+    border-radius: 6px;
+    text-decoration: none;
+    color: black;
+    max-width: 250px;
+    display: block;
+    text-align: center;
+}
+.btn-more:hover{
+    color: black;
+    background-color: var(--color1);
+    transition: 0.3s ease;
+}
+.buttonMore {
+    margin-top: 18px;
+}
+
+.col-xl-3, .col-md-6, .col-sm-12 {
+    box-sizing: border-box; /* Учитывает padding и border в ширине */
+    margin-bottom: 20px; /* Добавляет отступы между строками */
+    padding: 0;
+}
+
+.col-xl-3 {
+    flex: 1 1 250px; /* Устанавливает ширину для каждого блока */
+    max-width: 250px; /* Ограничивает ширину блока */
+}
+
+.btn-form {
+    width: auto; /* Автоматическая ширина */
+    padding: 4px 16px;
+    background-color: var(--buttonBG);
+    color: black;
+    border: none;
+    border-radius: 6px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-form:hover {
+    background-color: var(--color1);
+}
+
+.form-section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Добавляет расстояние между элементами */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 24px; /* Отступы между полями */
+    align-items: flex-end; /* Выровнять все элементы внутри формы по правому краю */
+}
+
+.form-group {
+    width: 100%; /* Поля ввода растягиваются на всю ширину */
+}
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    font-size: 16px;
+    margin-top: 5px;
+}
+
+.form-group textarea{
+    resize: none;
+}
+
+.contacts {
+    display: flex;
+    flex-direction: row;
+    gap: 100%;
+}
+
+.message {
+    text-decoration: none;
+    color: var(--color3);
+}
+
+.txtServ {
+    display: flex;
+    flex-direction: column;
+    gap: 100%;
+    padding: 20px 0;
+}
+
+.adv_t {
+    color: black;
+}
+.adv_h {
+    color: var(--color3);
+}
+.adv {
+    border-radius: 16px;
+    background-color: var(--color4);
+    width: 100%;
+    box-sizing: border-box; /* Учитываем padding и границы */
+}
+.txtBlock {
+    padding: 24px 16px;
+    width: 235px;
+}
+.row-adv {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+.row-adv > [class*="col"] {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.c_shadow-adv {
+    box-shadow: 0px 3px 12px 0px rgba(0, 0, 0, 0.2);
+}
+
+
+
+
+
+

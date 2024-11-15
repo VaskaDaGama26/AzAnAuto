@@ -1,0 +1,43 @@
+.contacts-zone {
+    height: 387px;
+    background-color: #4DB48F;
+    color: #ffffff;
+    border-radius: 18px;
+    padding: 45px;
+    font-family: "Proxima Nova";
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.contacts-title {
+    display: block;
+    font-weight: bold;
+}
+
+.contacts-subtitle {
+    display: block;
+    color: #c9c9c9;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.contacts-info a {
+    display: flex; /* Используем flex для горизонтального выравнивания иконок и текста */
+    align-items: center;
+    color: #ffffff;
+    text-decoration: underline;
+    margin-bottom: 10px;
+}
+
+.contacts-info a:hover {
+    color: #c9c9c9;
+    transition: 0.3s ease;
+}
+
+.contacts-info img {
+    width: 24px; /* Устанавливаем размер иконки */
+    height: 24px;
+    margin-right: 10px; /* Отступ справа от иконки */
+}
+
