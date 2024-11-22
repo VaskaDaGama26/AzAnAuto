@@ -82,11 +82,18 @@ session_start();
                 <div class="col-lg-5 col-md-12 d-flex align-items-center">
                     <div>
                         <h2 class="mb-3 fs-48px about_color">Ваш идеальный автомобиль — наша забота</h2>
-                        <p class="text-start fs-28px about_color_p">Подбор и доставка авто из ОАЭ</p>
+                        <p class="text-start fs-28px about_color_p">Подбор и доставка авто из ОАЭ</p>
                     </div>
                 </div>
-                <div class="col-lg-7 col-md-12 d-flex" style="justify-content: flex-end;">
+                <!-- <div class="col-lg-7 col-md-12 d-flex" style="justify-content: flex-end;">
                     <img src="img/Lexus.svg" class="img-fluid br-16px" style="object-fit: cover;">
+                </div> -->
+                <div class="col-lg-6 col-md-12 d-flex" style="justify-content: flex-end;">
+                    <video style="border-radius:6px"class="w-100 h-auto" poster="/img/preview.png" controls>
+                      <source src="img/Main.mp4" type="video/mp4">
+                      Ваш браузер не поддерживает видео.
+                    </video>
+
                 </div>
             </div>
         </div>
@@ -194,9 +201,9 @@ session_start();
                 <div class="contacts-zone col-lg-5 col-md-12 mb-32px">
                     <a class="contacts-title fs-48px">Контакты</a>
                     <a class="contacts-subtitle fs-28px">Свяжитесь с нами!</a>
-                    <div class="contacts-info fs-20px">
+                    <div class="contacts-info">
                         <!-- <a><img src="images/phone-icon.png" alt="Phone Icon">+973 1234 1234</a> -->
-                        <a href="https://t.me/azanauto" class="contacts-badge fs-20px"><img src="img/telegram.png" alt="Telegram">@azanauto</a>
+                        <a href="https://t.me/azanauto" class="contacts-badge fs-24px"><img src="img/telegram.png" alt="Telegram">@azanauto</a>
                     </div>
                 </div>
                 <div class="form-section col-lg-6 col-md-12">
