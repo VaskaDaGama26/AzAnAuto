@@ -90,17 +90,26 @@ $result = mysqli_query($connect, $query);
                                 <div class="vehicle-details">
                                     <span class="vehicle-title" style="color:black;">' . htmlspecialchars($car['Car_Year']) .' '. htmlspecialchars($car['Car_Name']) . '</span>
                                     <div class="vehicle-info mt-2">
-                                        <span class="badge"><span class="material-icons">airline_seat_recline_normal</span>' . htmlspecialchars($car['Car_Seats']) . '</span>
-                                        <span class="badge"><span class="material-icons">opacity</span>' . htmlspecialchars($car['Car_Litres']) . 'L</span>
-                                        <span class="badge">' . htmlspecialchars($car['Car_Cylinders']) . ' Cylinder</span>
-                                    </div>
+                                        <span class="badge"><span class="material-icons">airline_seat_recline_normal</span>' . htmlspecialchars($car['Car_Seats']) . '</span>';
+                    
+                    // Проверяем, что Car_Litres не пустое
+                    if (!empty($car['Car_Litres'])) {
+                        echo '<span class="badge"><span class="material-icons">opacity</span>' . htmlspecialchars($car['Car_Litres']) . 'L</span>';
+                    }
+            
+                    // Проверяем, что Car_Cylinders не пустое
+                    if (!empty($car['Car_Cylinders'])) {
+                        echo '<span class="badge">' . htmlspecialchars($car['Car_Cylinders']) . ' Cylinder</span>';
+                    }
+            
+                    echo '        </div>
                                 </div>
                             </div>
                         </div>
                     ';
                 }
                 echo '</div>';
-            } 
+            }
             ?>
         </div>
     </section>
