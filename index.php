@@ -1,17 +1,11 @@
 <?php
-// Подключение к базе данных
 include('db_connect.php');
-// Список допустимых таблиц, соответствующих маркам автомобилей
 $allowed_tables = ['Audi', 'Chevrolet', 'Ford', 'Hyundai', 'Infiniti', 'Lexus', 'Mercedes', 'Mitsubishi', 'Nissan', 'Others', 'Toyota'];
-// Создание массива для хранения запросов
 $queries = [];
-// Формирование SQL-запросов для каждой таблицы
 foreach ($allowed_tables as $table) {
     $queries[] = "SELECT '$table' AS Brand, Car_Name, Car_Img, Car_Year, Car_Litres, Car_Cylinders, Car_Seats, Car_Price FROM $table WHERE Car_Popular = '1'";
 }
-// Объединение всех запросов с помощью UNION
 $final_query = implode(' UNION ', $queries) . " ORDER BY Brand ASC, Car_Name ASC";
-// Выполнение объединенного SQL-запроса
 $result = mysqli_query($connect, $final_query);
 if (!$result) {
     die("Ошибка выполнения запроса: " . mysqli_error($connect));
@@ -144,7 +138,6 @@ session_start();
                 </div>
             </div>
             <?php 
-            // Проверяем, что запрос вернул результаты
             if ($result && mysqli_num_rows($result) > 0) {
                 echo '<div class="row justify-content-start gy-4">';
                 while ($car = mysqli_fetch_assoc($result)) {
@@ -234,17 +227,15 @@ session_start();
     <script src="script/bootstrap.bundle.min.js"></script>
     <script src="script/animation.js"></script>
     <script>
-        // Получаем все ссылки навигации
         const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
     
         navLinks.forEach(link => {
             link.addEventListener('click', function() {
-                // Закрываем бургер-меню
                 const navbarCollapse = document.getElementById('navbarNav');
                 const bsCollapse = new bootstrap.Collapse(navbarCollapse, {
-                    toggle: false // Не переключаем состояние
+                    toggle: false
                 });
-                bsCollapse.hide(); // Закрываем меню
+                bsCollapse.hide();
             });
         });
     </script>
