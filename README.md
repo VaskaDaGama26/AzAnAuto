@@ -1,6 +1,6 @@
 # AzAnAuto
 
-> HTML5 | CSS3 | JS | BS5 | PHP8 | MySQL
+> # HTML5 | CSS3 | JS | BS5 | PHP8 | MySQL
 
 AzAnAuto - website for a company which sells and delivers cars from UAE to Russian Federation and Republic of Kazakhstan.
 
